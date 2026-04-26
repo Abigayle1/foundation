@@ -1,37 +1,49 @@
 import Link from "next/link"
-import { ArrowRight, BookOpen, Building2, Heart, Newspaper, User } from "lucide-react"
+import { ArrowRight, BookOpen, Building2, Heart, Newspaper, User, GraduationCap, Calendar, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const highlights = [
   {
     title: "Autobiography",
-    description: "Discover the inspiring journey of Omar W. Brown Jr., from his roots in the Caribbean to becoming a voice for change.",
+    description: "Discover the inspiring journey of Dr. Claudette Brown, from her roots in the Caribbean to becoming a voice for change.",
     href: "/autobiography",
     icon: User,
   },
   {
-    title: "ICCF",
+    title: "ICCF Organization",
     description: "The Institute for Caribbean Children and Family is dedicated to improving the lives of children and families across the region.",
     href: "/organization",
     icon: Building2,
   },
   {
-    title: "Publications",
-    description: "Explore our collection of books, research papers, and educational materials designed to inspire and educate.",
-    href: "/publications",
+    title: "Training Services",
+    description: "Professional development programs in play therapy, social work, Caribbean migration, and counselling.",
+    href: "/training-services",
+    icon: GraduationCap,
+  },
+  {
+    title: "Materials",
+    description: "Explore our collection of publications, training materials, and educational resources from ACT NOW Production.",
+    href: "/materials",
     icon: BookOpen,
+  },
+  {
+    title: "Special Events",
+    description: "Learn about our signature initiatives, speaking engagements, and community programs.",
+    href: "/special-events",
+    icon: Calendar,
+  },
+  {
+    title: "Family",
+    description: "Meet the family members who continue the legacy of service and community empowerment.",
+    href: "/family",
+    icon: Users,
   },
   {
     title: "Newsletters",
     description: "Stay informed with our regular updates on initiatives, events, and stories from the communities we serve.",
     href: "/newsletters",
     icon: Newspaper,
-  },
-  {
-    title: "Foundation",
-    description: "Learn about the Omar W. Brown Jr. Foundation and how we work to create lasting positive change.",
-    href: "/foundation",
-    icon: Heart,
   },
 ]
 
@@ -44,10 +56,13 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="font-serif text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-              Empowering Communities, Transforming Lives
+              Dr. Crawford Claudette Brown
             </h1>
+            <p className="mt-2 font-serif text-xl text-accent sm:text-2xl">
+              PhD, OD
+            </p>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Welcome to the official platform of Omar W. Brown Jr. — author, advocate, and founder of the Institute for Caribbean Children and Family. Together, we are building a brighter future for Caribbean communities.
+              Dedicated to empowering Caribbean children and families through education, advocacy, training, and community development. Founder of the Institute for Caribbean Children and Family.
             </p>
             <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
               <Link href="/autobiography">
@@ -56,9 +71,9 @@ export default function HomePage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/foundation">
+              <Link href="/organization">
                 <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Support Our Mission
+                  Explore ICCF
                 </Button>
               </Link>
             </div>
@@ -76,10 +91,10 @@ export default function HomePage() {
                 A Lifetime Dedicated to Service
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                For over three decades, Omar W. Brown Jr. has been at the forefront of advocacy for Caribbean children and families. His work spans education, community development, and policy reform.
+                For decades, Dr. Claudette Brown has been at the forefront of advocacy for Caribbean children and families. Her work spans education, training, community development, and policy reform.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                Through the Institute for Caribbean Children and Family (ICCF) and the Omar W. Brown Jr. Foundation, he continues to create lasting impact in communities across the Caribbean and beyond.
+                Through the Institute for Caribbean Children and Family (ICCF), ACT NOW Production, and numerous international collaborations, she continues to create lasting impact in communities across the Caribbean and beyond.
               </p>
               <div className="mt-8">
                 <Link href="/autobiography">
@@ -94,7 +109,7 @@ export default function HomePage() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-muted-foreground">
                   <User className="mx-auto h-16 w-16 mb-4 opacity-50" />
-                  <p className="text-sm">Author Portrait</p>
+                  <p className="text-sm">Dr. Claudette Brown</p>
                 </div>
               </div>
             </div>
@@ -111,11 +126,11 @@ export default function HomePage() {
               Discover Our Work
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              From publications to community programs, explore the many ways we are making a difference.
+              From training programs to community initiatives, explore the many ways we are making a difference.
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
             {highlights.map((item) => (
               <Link
                 key={item.title}
@@ -149,8 +164,8 @@ export default function HomePage() {
               &ldquo;Every child deserves the opportunity to dream, to learn, and to thrive. It is our collective responsibility to ensure they have that chance.&rdquo;
             </p>
             <footer className="mt-8">
-              <p className="text-base font-semibold text-primary">Omar W. Brown Jr.</p>
-              <p className="text-sm text-muted-foreground">Founder, ICCF & Omar W. Brown Jr. Foundation</p>
+              <p className="text-base font-semibold text-primary">Dr. Claudette Brown</p>
+              <p className="text-sm text-muted-foreground">Founder, ICCF</p>
             </footer>
           </blockquote>
         </div>
@@ -161,9 +176,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {[
-              { value: "30+", label: "Years of Service" },
+              { value: "35+", label: "Years of Service" },
               { value: "50K+", label: "Children Supported" },
-              { value: "15+", label: "Publications" },
+              { value: "20+", label: "Publications" },
               { value: "12", label: "Countries Reached" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
@@ -188,13 +203,13 @@ export default function HomePage() {
                 Join Us in Making a Difference
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Whether through donations, volunteering, or spreading awareness, your support helps us continue our mission of empowering Caribbean children and families.
+                Whether through training, collaboration, or spreading awareness, your support helps us continue our mission of empowering Caribbean children and families.
               </p>
               <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
-                <Link href="/foundation#donate">
+                <Link href="/training-services">
                   <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                    Donate Now
-                    <Heart className="ml-2 h-4 w-4" />
+                    Explore Training
+                    <GraduationCap className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href="/newsletters">

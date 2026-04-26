@@ -8,10 +8,12 @@ import { Button } from "@/components/ui/button"
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Autobiography", href: "/autobiography" },
-  { name: "ICCF", href: "/organization" },
-  { name: "Publications", href: "/publications" },
+  { name: "ICCF Organization", href: "/organization" },
+  { name: "Training Services", href: "/training-services" },
+  { name: "Materials", href: "/materials" },
+  { name: "Special Events", href: "/special-events" },
+  { name: "Family", href: "/family" },
   { name: "Newsletters", href: "/newsletters" },
-  { name: "Foundation", href: "/foundation" },
 ]
 
 export function Header() {
@@ -22,8 +24,8 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="font-serif text-2xl font-semibold text-primary">
-              Omar W. Brown Jr.
+            <span className="font-serif text-xl font-semibold text-primary lg:text-2xl">
+              Dr. Claudette Brown
             </span>
           </Link>
         </div>
@@ -68,7 +70,7 @@ export function Header() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                 <span className="font-serif text-xl font-semibold text-primary">
-                  Omar W. Brown Jr.
+                  Dr. Claudette Brown
                 </span>
               </Link>
               <Button

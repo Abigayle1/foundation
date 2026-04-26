@@ -5,10 +5,12 @@ const navigation = {
   main: [
     { name: "Home", href: "/" },
     { name: "Autobiography", href: "/autobiography" },
-    { name: "ICCF", href: "/organization" },
-    { name: "Publications", href: "/publications" },
+    { name: "ICCF Organization", href: "/organization" },
+    { name: "Training Services", href: "/training-services" },
+    { name: "Materials", href: "/materials" },
+    { name: "Special Events", href: "/special-events" },
+    { name: "Family", href: "/family" },
     { name: "Newsletters", href: "/newsletters" },
-    { name: "Foundation", href: "/foundation" },
   ],
   social: [
     { name: "Facebook", href: "#", icon: Facebook },
@@ -26,7 +28,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block">
               <span className="font-serif text-2xl font-semibold">
-                Omar W. Brown Jr.
+                Dr. Claudette Brown
               </span>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/80 leading-relaxed">
@@ -122,7 +124,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8">
           <p className="text-center text-sm text-primary-foreground/60">
-            &copy; {new Date().getFullYear()} Omar W. Brown Jr. Foundation. All rights reserved.
+            &copy; {new Date().getFullYear()} Dr. Crawford Claudette Brown. All rights reserved.
           </p>
         </div>
       </div>
