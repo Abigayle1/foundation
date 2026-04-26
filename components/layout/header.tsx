@@ -122,66 +122,66 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="font-serif text-xl font-semibold text-primary lg:text-2xl">
-              Dr. Claudette Brown
-            </span>
-          </Link>
-        </div>
+    <>
+      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <div className="flex lg:flex-1">
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="font-serif text-xl font-semibold text-primary lg:text-2xl">
+                Dr. Claudette Brown
+              </span>
+            </Link>
+          </div>
 
-        <div className="flex lg:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setMobileMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
-        </div>
-
-        <div className="hidden lg:flex lg:items-center lg:gap-x-6">
-          {navigation.map((item) =>
-            item.children ? (
-              <DesktopDropdown key={item.name} item={item} />
-            ) : (
-              <Link
-                key={item.name}
-                href={item.href!}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
-                {item.name}
-              </Link>
-            )
-          )}
-        </div>
-
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/foundation#donate">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Support Us
+          <div className="flex lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu className="h-6 w-6" />
             </Button>
-          </Link>
-        </div>
-      </nav>
+          </div>
 
-      {/* Mobile menu */}
+          <div className="hidden lg:flex lg:items-center lg:gap-x-6">
+            {navigation.map((item) =>
+              item.children ? (
+                <DesktopDropdown key={item.name} item={item} />
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href!}
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
+          </div>
+
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <Link href="/foundation#donate">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Support Us
+              </Button>
+            </Link>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile menu - rendered outside header for full-screen overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden">
+        <div className="fixed inset-0 z-[100] lg:hidden">
+          {/* Backdrop */}
           <div
-            className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"
+            className="fixed inset-0 bg-background/80 backdrop-blur-sm"
             onClick={closeMobileMenu}
           />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
+          {/* Menu panel */}
+          <div className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
             <div className="flex items-center justify-between">
-              <Link
-                href="/"
-                className="-m-1.5 p-1.5"
-                onClick={closeMobileMenu}
-              >
+              <Link href="/" className="-m-1.5 p-1.5" onClick={closeMobileMenu}>
                 <span className="font-serif text-xl font-semibold text-primary">
                   Dr. Claudette Brown
                 </span>
@@ -231,6 +231,6 @@ export function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   )
 }
