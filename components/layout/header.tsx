@@ -6,34 +6,17 @@ import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navigation = [
-  { name: "Home", href: "/" },
+  { name: "Who is Claudette", href: "/" },
+  { name: "Family & Personal Life", href: "/family-personal-life" },
+  { name: "Work & Other Lives", href: "/work-other-lives" },
   {
-    name: "About",
+    name: "Family Members",
     children: [
-      { name: "Autobiography", href: "/autobiography" },
-      { name: "Family", href: "/family" },
+      { name: "Nicole", href: "/nicole" },
+      { name: "Janelle", href: "/janelle" },
+      { name: "Omari", href: "/omari" },
     ],
   },
-  {
-    name: "Organization",
-    children: [
-      { name: "ICCF Organization", href: "/organization" },
-    ],
-  },
-  {
-    name: "Work & Services",
-    children: [
-      { name: "Training Services", href: "/training-services" },
-      { name: "Materials (ACT NOW Production)", href: "/materials" },
-    ],
-  },
-  {
-    name: "Projects & Events",
-    children: [
-      { name: "Special Events", href: "/special-events" },
-    ],
-  },
-  { name: "Newsletters", href: "/newsletters" },
 ]
 
 type NavItem = {

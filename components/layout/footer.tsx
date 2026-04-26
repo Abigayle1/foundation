@@ -3,14 +3,12 @@ import { Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 
 const navigation = {
   main: [
-    { name: "Home", href: "/" },
-    { name: "Autobiography", href: "/autobiography" },
-    { name: "ICCF Organization", href: "/organization" },
-    { name: "Training Services", href: "/training-services" },
-    { name: "Materials", href: "/materials" },
-    { name: "Special Events", href: "/special-events" },
-    { name: "Family", href: "/family" },
-    { name: "Newsletters", href: "/newsletters" },
+    { name: "Who is Claudette Crawford-Brown", href: "/" },
+    { name: "Family & Personal Life", href: "/family-personal-life" },
+    { name: "Work & Other Lives", href: "/work-other-lives" },
+    { name: "Nicole", href: "/nicole" },
+    { name: "Janelle", href: "/janelle" },
+    { name: "Omari", href: "/omari" },
   ],
   social: [
     { name: "Facebook", href: "#", icon: Facebook },
