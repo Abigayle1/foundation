@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Omar W. Brown Jr. | Author & Foundation',
+  title: 'Dr. Crawford Claudette Brown | Claudette Brown PhD, OD',
   description: 'Dedicated to empowering Caribbean children and families through education, advocacy, and community development.',
   generator: 'v0.app',
   icons: {
