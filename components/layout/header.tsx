@@ -6,9 +6,9 @@ import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navigation = [
-  { name: "Who is Claudette", href: "/" },
+  { name: "Autobiography", href: "/" },
   { name: "Family & Personal Life", href: "/family-personal-life" },
-  { name: "Work & Other Lives", href: "/work-other-lives" },
+  { name: "Organization - ICCF", href: "/work-other-lives" },
   {
     name: "Family Members",
     children: [

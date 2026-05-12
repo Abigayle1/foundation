@@ -3,12 +3,13 @@ import { Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 
 const navigation = {
   main: [
-    { name: "Who is Claudette Crawford-Brown", href: "/" },
+    { name: "Autobiography", href: "/" },
     { name: "Family & Personal Life", href: "/family-personal-life" },
-    { name: "Work & Other Lives", href: "/work-other-lives" },
-    { name: "Nicole", href: "/nicole" },
-    { name: "Janelle", href: "/janelle" },
-    { name: "Omari", href: "/omari" },
+    { name: "Organization - ICCF", href: "/work-other-lives" },
+    {name: "Family Members", href: "#"},
+    { name: " • Nicole", href: "/nicole" },
+    { name: " • Janelle", href: "/janelle" },
+    { name: " • Omari", href: "/omari" },
   ],
   social: [
     { name: "Facebook", href: "#", icon: Facebook },
@@ -69,7 +70,7 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-accent" />
                 <span className="text-sm text-primary-foreground/80">
-                  +1 (876) 555-0123
+                  +1 (876) 345-3888s
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -123,7 +124,8 @@ export function Footer() {
         <div className="mt-12 border-t border-primary-foreground/20 pt-8">
           <p className="text-center text-sm text-primary-foreground/60">
             &copy; {new Date().getFullYear()} Dr. Crawford Claudette Brown. All rights reserved.
-          </p>
+          </p> 
+          {/*Need to add something that link to me. */}
         </div>
       </div>
     </footer>
