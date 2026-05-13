@@ -84,9 +84,6 @@ export default function FamilyPage() {
             <p className="font-serif text-2xl font-medium italic text-foreground sm:text-3xl leading-relaxed">
               &ldquo;Family is the foundation from which all our work grows. The values we share and the bonds we nurture give us the strength to serve our communities with purpose and dedication.&rdquo;
             </p>
-            <footer className="mt-8">
-              <p className="text-base font-semibold text-primary">Dr. Claudette Brown</p>
-            </footer>
           </blockquote>
         </div>
       </section>
