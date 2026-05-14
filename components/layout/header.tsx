@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 const navigation = [
   { name: "Autobiography", href: "/" },
   { name: "Family & Personal Life", href: "/family-personal-life" },
-  { name: "Organization", href: "/Organization" },
+  { name: "Organization", href: "/organization" },
   { name: "Newsletter", href: "/newsletters"},
   { name: "Omar W. Brown Jr. Foundation", href: "/omari" },
 ]
