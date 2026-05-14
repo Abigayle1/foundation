@@ -2,106 +2,27 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navigation = [
   { name: "Autobiography", href: "/" },
   { name: "Family & Personal Life", href: "/family-personal-life" },
-  { name: "Organization - ICCF", href: "/work-other-lives" },
-  {
-    name: "Family Members",
-    children: [
-      { name: "Nicole", href: "/nicole" },
-      { name: "Janelle", href: "/janelle" },
-      { name: "Omari", href: "/omari" },
-    ],
-  },
+  { name: "Organization", href: "/Organization" },
+  { name: "Newsletter", href: "/newsletters"},
+  { name: "Omar W. Brown Jr. Foundation", href: "/omari" },
 ]
 
 type NavItem = {
   name: string
-  href?: string
-  children?: { name: string; href: string }[]
-}
-
-function DesktopDropdown({ item }: { item: NavItem }) {
-  return (
-    <div className="group relative">
-      <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
-        {item.name}
-        <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
-      </button>
-      <div className="invisible absolute left-0 top-full z-50 min-w-48 pt-2 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-        <div className="rounded-lg border border-border bg-background p-2 shadow-lg">
-          {item.children?.map((child) => (
-            <Link
-              key={child.name}
-              href={child.href}
-              className="block rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
-            >
-              {child.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function MobileDropdown({
-  item,
-  isOpen,
-  onToggle,
-  onLinkClick,
-}: {
-  item: NavItem
-  isOpen: boolean
-  onToggle: () => void
-  onLinkClick: () => void
-}) {
-  return (
-    <div>
-      <button
-        onClick={onToggle}
-        className="-mx-3 flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-secondary"
-      >
-        {item.name}
-        <ChevronDown
-          className={`h-5 w-5 transition-transform ${isOpen ? "rotate-180" : ""}`}
-        />
-      </button>
-      {isOpen && (
-        <div className="ml-4 mt-1 space-y-1 border-l border-border pl-4">
-          {item.children?.map((child) => (
-            <Link
-              key={child.name}
-              href={child.href}
-              className="block rounded-lg py-2 text-sm text-muted-foreground hover:text-primary"
-              onClick={onLinkClick}
-            >
-              {child.name}
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  )
+  href: string
 }
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([])
-
-  const toggleDropdown = (name: string) => {
-    setOpenDropdowns((prev) =>
-      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
-    )
-  }
-
+  
   const closeMobileMenu = () => {
     setMobileMenuOpen(false)
-    setOpenDropdowns([])
   }
 
   return (
@@ -128,27 +49,15 @@ export function Header() {
           </div>
 
           <div className="hidden lg:flex lg:items-center lg:gap-x-6">
-            {navigation.map((item) =>
-              item.children ? (
-                <DesktopDropdown key={item.name} item={item} />
-              ) : (
-                <Link
-                  key={item.name}
-                  href={item.href!}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-                >
-                  {item.name}
-                </Link>
-              )
-            )}
-          </div>
-
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="/foundation#donate">
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Support Us
-              </Button>
-            </Link>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         </nav>
       </header>
@@ -181,33 +90,16 @@ export function Header() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-border">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) =>
-                    item.children ? (
-                      <MobileDropdown
-                        key={item.name}
-                        item={item}
-                        isOpen={openDropdowns.includes(item.name)}
-                        onToggle={() => toggleDropdown(item.name)}
-                        onLinkClick={closeMobileMenu}
-                      />
-                    ) : (
-                      <Link
-                        key={item.name}
-                        href={item.href!}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-secondary"
-                        onClick={closeMobileMenu}
-                      >
-                        {item.name}
-                      </Link>
-                    )
-                  )}
-                </div>
-                <div className="py-6">
-                  <Link href="/foundation#donate" onClick={closeMobileMenu}>
-                    <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                      Support Us
-                    </Button>
-                  </Link>
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-secondary"
+                      onClick={closeMobileMenu}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>

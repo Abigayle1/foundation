@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, User, Heart, Briefcase } from "lucide-react"
+import { ArrowRight,HeartHandshake, Users, Heart, Briefcase } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
@@ -35,21 +35,19 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-primary-foreground  hover:text-primary-foreground text-primary"
-                  >
-                    Work & Other Lives
+                    className="border-primary-foreground  hover:text-primary-foreground text-primary">
+                    Organization 
                     <Briefcase className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
             </div>
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-primary-foreground/10">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-primary-foreground/60">
-                  <User className="mx-auto h-24 w-24 mb-4" />
-                  <p className="text-sm">Dr. Claudette Crawford-Brown</p>
-                </div>
-              </div>
+              <img
+                src="/Media/Image/Dr Claudette Brown.jpg"
+                alt="Dr. Claudette Crawford-Brown"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -75,8 +73,7 @@ export default function HomePage() {
                 migration on children left behind.
               </p>
               <p>
-                As a professor, therapist, and advocate, she has trained
-                generations of social workers and counselors, established
+                As a professor and advocate, she has established
                 innovative programs at the University of the West Indies, and
                 founded the Institute for Caribbean Children and Families
                 (ICCF).
@@ -99,7 +96,7 @@ export default function HomePage() {
               Explore Her Story
             </span>
             <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              Two Paths, One Legacy
+              Three Paths, One Legacy
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Discover the personal journey and professional achievements that
@@ -107,37 +104,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-3">
             {/* Family & Personal Life Card */}
             <Link
               href="/family-personal-life"
               className="group relative flex flex-col rounded-2xl bg-card p-8 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                <Heart className="h-7 w-7" />
+                <Users className="h-7 w-7" />
               </div>
               <h3 className="mt-6 font-serif text-2xl font-semibold text-card-foreground">
-                Family & Personal Life
+                Life & Legacy
               </h3>
               <p className="mt-4 flex-1 text-muted-foreground leading-relaxed">
                 Journey through the personal milestones, family adventures, and
                 cherished moments that have shaped Dr. Crawford-Brown&apos;s
                 life outside academia.
-              </p>
-              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  Browns on the Move
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  The Whittingham Years
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  The Diamond Homestead
-                </li>
-              </ul>
+              </p>              
               <div className="mt-8 flex items-center text-sm font-medium text-primary">
                 Explore Personal Life
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -166,15 +149,48 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  The UWI Years
+                  The Barrel Child Syndrome & Caribbean Migration
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  International Projects
+                  The UWI Years
                 </li>
               </ul>
               <div className="mt-8 flex items-center text-sm font-medium text-primary">
                 Explore Professional Life
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+
+            {/* Omar W. Brown Foundation Card */}
+            <Link
+              href="/omari"
+              className="group relative flex flex-col rounded-2xl bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                <HeartHandshake className="h-7 w-7" />
+              </div>
+
+              <h3 className="mt-6 font-serif text-2xl font-semibold text-card-foreground">
+                Omar W. Brown Jr. Foundation
+              </h3>
+
+              <p className="mt-4 flex-1 text-muted-foreground leading-relaxed">
+                Explore the story, memories, and community impact connected to the Omar W. Brown Jr. Foundation and its continued legacy of service.
+              </p>
+
+              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  Foundation Gallery
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  Publications & Academic Work
+                </li>
+              </ul>
+              <div className="mt-13 flex items-center text-sm font-medium text-primary">
+                Explore Foundation
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
@@ -191,12 +207,7 @@ export default function HomePage() {
               and to thrive. It is our collective responsibility to ensure they
               have that chance.&rdquo;
             </p>
-            <footer className="mt-8">
-              <p className="text-base font-semibold text-primary">
-                Dr. Claudette Crawford-Brown
-              </p>
-              <p className="text-sm text-muted-foreground">PhD, OD</p>
-            </footer>
+
           </blockquote>
         </div>
       </section>

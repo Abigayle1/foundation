@@ -5,11 +5,8 @@ const navigation = {
   main: [
     { name: "Autobiography", href: "/" },
     { name: "Family & Personal Life", href: "/family-personal-life" },
-    { name: "Organization - ICCF", href: "/work-other-lives" },
-    {name: "Family Members", href: "#"},
-    { name: " • Nicole", href: "/nicole" },
-    { name: " • Janelle", href: "/janelle" },
-    { name: " • Omari", href: "/omari" },
+    { name: "Organization", href: "/work-other-lives" },
+    {name: "Omar W. Brown Foundation", href: "/omari"},
   ],
   social: [
     { name: "Facebook", href: "#", icon: Facebook },
@@ -70,13 +67,13 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-accent" />
                 <span className="text-sm text-primary-foreground/80">
-                  +1 (876) 345-3888s
+                  +1 (876) 345-3888
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 shrink-0 text-accent" />
                 <span className="text-sm text-primary-foreground/80">
-                  info@omarwbrownjr.org
+                  claudettepatriciajean53@gmail.com  
                 </span>
               </li>
             </ul>
