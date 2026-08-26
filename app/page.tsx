@@ -44,7 +44,7 @@ export default function HomePage() {
             </div>
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-primary-foreground/10">
               <img
-                src="/Media/Image/Dr Claudette Brown.jpg"
+                src="/Media/Image/CCB-photo1.png"
                 alt="Dr. Claudette Crawford-Brown"
                 className="h-full w-full object-cover"
               />
@@ -96,7 +96,7 @@ export default function HomePage() {
               Explore Her Story
             </span>
             <h2 className="mt-2 font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-              Three Paths, One Legacy
+              Three Paths to a Legacy of Service
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Discover the personal journey and professional achievements that
@@ -114,15 +114,39 @@ export default function HomePage() {
                 <Users className="h-7 w-7" />
               </div>
               <h3 className="mt-6 font-serif text-2xl font-semibold text-card-foreground">
-                Life & Legacy
+                Family History Past & Present
               </h3>
               <p className="mt-4 flex-1 text-muted-foreground leading-relaxed">
                 Journey through the personal milestones, family adventures, and
                 cherished moments that have shaped Dr. Crawford-Brown&apos;s
                 life outside academia.
-              </p>              
+              </p>     
+
+              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                   Nicole Brown
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  Janelle Brown 
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  Omar W. Brown Jr.
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  The Paris Years
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  Order of Distinction 2024
+                </li>
+              </ul>
+
               <div className="mt-8 flex items-center text-sm font-medium text-primary">
-                Explore Personal Life
+                Explore Family History
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
@@ -136,24 +160,23 @@ export default function HomePage() {
                 <Briefcase className="h-7 w-7" />
               </div>
               <h3 className="mt-6 font-serif text-2xl font-semibold text-card-foreground">
-                Work & Other Lives
+                Teaching, Training & Travel
               </h3>
-              <p className="mt-4 flex-1 text-muted-foreground leading-relaxed">
-                Explore the professional achievements, groundbreaking research,
-                and international collaborations that have defined her career.
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Dr. Claudette Crawford-Brown has demonstrated a strong commitment to teaching, training, and travel through her work in sharing knowledge, building capacity, and supporting communities locally and internationally.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  Institute for Caribbean Children & Families
+                  The UWI Era
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  The Barrel Child Syndrome & Caribbean Migration
+                  Connecticut Years
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  The UWI Years
+                  Florida Years
                 </li>
               </ul>
               <div className="mt-8 flex items-center text-sm font-medium text-primary">
@@ -162,7 +185,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* Omar W. Brown Foundation Card */}
+            {/* Community, Advocacy & Activism Card */}
             <Link
               href="/omari"
               className="group relative flex flex-col rounded-2xl bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
@@ -172,21 +195,25 @@ export default function HomePage() {
               </div>
 
               <h3 className="mt-6 font-serif text-2xl font-semibold text-card-foreground">
-                Omar W. Brown Jr. Foundation
+                Community, Advocacy & Activism
               </h3>
 
               <p className="mt-4 flex-1 text-muted-foreground leading-relaxed">
-                Explore the story, memories, and community impact connected to the Omar W. Brown Jr. Foundation and its continued legacy of service.
+                Dr. Claudette Crawford-Brown advances community development, advocacy, and activism through her lifelong commitment to social justice, family wellbeing, and meaningful change.
               </p>
 
               <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  Foundation Gallery
+                  Children&apos;s Lobby
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                  Publications & Academic Work
+                  Alpha Play Therapy Training Project
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  Institute for Caribbeam Children & Families
                 </li>
               </ul>
               <div className="mt-13 flex items-center text-sm font-medium text-primary">

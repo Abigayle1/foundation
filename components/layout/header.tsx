@@ -7,10 +7,9 @@ import { Button } from "@/components/ui/button"
 
 const navigation = [
   { name: "Autobiography", href: "/" },
-  { name: "Family & Personal Life", href: "/family-personal-life" },
-  { name: "Organization", href: "/Organization" },
-  { name: "Newsletter", href: "/newsletters"},
-  { name: "Omar W. Brown Jr. Foundation", href: "/omari" },
+  { name: "Organizations", href: "/Organization" },
+  { name: "Acadmic Work", href:"/publications"},
+  { name: "Products & Services", href:"/products-and-services"},
 ]
 
 type NavItem = {
@@ -32,7 +31,7 @@ export function Header() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="font-serif text-xl font-semibold text-primary lg:text-2xl">
-                Dr. Claudette Brown
+                Dr. Claudette Crawford-Brown
               </span>
             </Link>
           </div>
