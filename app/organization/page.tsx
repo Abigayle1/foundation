@@ -148,7 +148,7 @@ export default function WorkOtherLivesPage() {
               Dr. Claudette Brown&apos;s 
             </h1> 
             <h1 className="font-serif text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl text-balance">     
-              Organization</h1>
+              Organizations [2 nav to iccf & */</h1>
             <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
               Explore the professional achievements, groundbreaking research, and international collaborations that have defined Dr. Crawford-Brown&apos;s remarkable career.
             </p>

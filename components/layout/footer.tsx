@@ -5,8 +5,8 @@ const navigation = {
   main: [
     { name: "Autobiography", href: "/" },
     { name: "Family & Personal Life", href: "/family-personal-life" },
-    { name: "Organization", href: "/organization" },
-    {name: "Omar W. Brown Foundation", href: "/omari"},
+    { name: "Organization", href: "/work-other-lives" },
+    {name: "Publications", href: "/publications"},
   ],
   social: [
     { name: "Facebook", href: "#", icon: Facebook },
