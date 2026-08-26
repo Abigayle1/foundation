@@ -31,7 +31,7 @@ const uwiSections = [
     icon: HeartHandshake,
     description: "ICCF provides counselling support to help children, families, and individuals address personal, social, and emotional challenges.",
     images:[
-      "/Media/Image/Special-events-1.png",
+      "/Media/Image/Special-events-1.jpg",
       "/Media/Image/apple-icon.png",
       "/Media/Image/apple-icon.png",
     ]
@@ -178,7 +178,7 @@ export default function WorkOtherLivesPage() {
             <div className="lg:col-span-2">
               <div className="overflow-hidden rounded-2xl">
                  <img
-                    src="/Media/image/Dr Claudette Brown.jpg"
+                    src="/Media/Image/Dr Claudette Brown.jpg"
                     alt="Dr Claudette Brown Image"
                     className="h-80 w-full rounded-2xl object-cover"
                   />

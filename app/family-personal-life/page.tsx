@@ -63,12 +63,12 @@ export default function FamilyPersonalLifePage() {
 
           <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "/Media/Image/family-1.jpg",
-              "/Media/Image/family-2.jpg",
-              "/Media/Image/family-3.jpg",
-              "/Media/Image/family-4.jpg",
-              "/Media/Image/family-5.jpg",
-              "/Media/Image/family-6.jpg",
+              "/Media/Image/Family-1.jpg",
+              "/Media/Image/Family-2.jpg",
+              "/Media/Image/Family-3.jpg",
+              "/Media/Image/Family-4.jpg",
+              "/Media/Image/Family-5.jpg",
+              "/Media/Image/Family-6.jpg",
             ].map((image, index) => (
               <div key={index} className="overflow-hidden rounded-2xl bg-muted shadow-sm">
                 <img
